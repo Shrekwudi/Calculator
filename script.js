@@ -127,7 +127,7 @@ deleteButton.addEventListener('click', button => {
 
 document.addEventListener('keydown', function (event) {
   let patternForNumbers = /[0-9]/g;
-  let patternForOperators = /[+\-*\/]/g
+  let patternForOperators = /[+\-x\/]/g
   if (event.key.match(patternForNumbers)) {
     event.preventDefault();
     calculator.appendNumber(event.key)
