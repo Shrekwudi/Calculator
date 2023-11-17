@@ -42,8 +42,8 @@ class Calculator {
       case '-':
         computation = prev - current
         break
-      case '*':
-        computation = prev * current
+      case 'x':
+        computation = prev x current
         break
       case '÷':
         computation = prev / current
@@ -127,7 +127,7 @@ deleteButton.addEventListener('click', button => {
 
 document.addEventListener('keydown', function (event) {
   let patternForNumbers = /[0-9]/g;
-  let patternForOperators = /[+\-*\/]/g
+  let patternForOperators = /[+\-x\/]/g
   if (event.key.match(patternForNumbers)) {
     event.preventDefault();
     calculator.appendNumber(event.key)
