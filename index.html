@@ -7,13 +7,30 @@
   </head>
   <body>
     <h1>Login</h1>
-    <form action="options.html">
+    <form action="options.html" onsubmit="return validateForm()">
       <label for="username">Username:</label>
-      <input type="text" id="calculator" name="username"><br><br>
+      <input type="text" id="username" name="username"><br><br>
       <label for="password">Password:</label>
-      <input type="password" id="maths" name="password"><br><br>
+      <input type="password" id="password" name="password"><br><br>
+      <label for="password2">Verify Password:</label>
+      <input type="password" id="password2" name="password2"><br><br>
       <input type="submit" value="Submit">
       <form id="login-form" action="options.html"></form>
+    </form>
+    <script>
+      function validateForm() {
+        var password = document.getElementById("password").value;
+        var password2 = document.getElementById("password2").value;
+        if (password != password2) {
+          alert("Passwords do not match");
+          return false;
+        }
+        return true;
+      }
+    </script>
+  </body>
+</html>
+      
     </form>
   </body>
 </html>
