@@ -18,15 +18,20 @@
       <form id="login-form" action="options.html"></form>
     </form>
     <script>
-      function validateForm() {
-        var password = document.getElementById("password").value;
-        var password2 = document.getElementById("password2").value;
-        if (password != password2) {
-          alert("Passwords do not match");
+        var correctPassword = "myPassword123";
+        if (password != correctPassword) {
+          alert("Incorrect password");
           return false;
         }
         return true;
-      }
+      
+    </script>
+  </body>
+</html>
+          return false;
+        
+        return true;
+      
     </script>
   </body>
 </html>
